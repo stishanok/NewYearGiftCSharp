@@ -65,7 +65,7 @@ namespace Model.Entity
 
             return result;
         }
-        
+
         bool IsEmpty()
         {
             return sweets.Count == 0;
