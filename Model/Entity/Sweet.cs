@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Model.Entity
 {
-    public class Sweet
+    public class Sweet : IEnumerable
     {
         private static string MSG_SWEET_IS_EMPTY = "Sweets is empty";
         
@@ -33,6 +33,11 @@ namespace Model.Entity
             return result;
         }
 
+        public System.Collections.IEnumerator GetEnumerator()
+        {
+            return sweets.GetEnumerator();
+        }
+        
         bool IsEmpty()
         {
             return sweets.Count == 0;
@@ -47,6 +52,6 @@ namespace Model.Entity
         {
             return sweets.Remove(sweet);
         }
-        
+
     }
 }
